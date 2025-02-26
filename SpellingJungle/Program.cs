@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 
-namespace Startup
+namespace SpellingJungle
 {
 	internal class Program
 	{

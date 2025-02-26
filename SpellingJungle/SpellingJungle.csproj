@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{02D0D1C8-84FD-41E0-B0CE-5D5C51D82669}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Startup</RootNamespace>
-    <AssemblyName>Startup</AssemblyName>
+    <RootNamespace>SpellingJungle</RootNamespace>
+    <AssemblyName>SpellingJungle</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -33,6 +33,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bst.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
