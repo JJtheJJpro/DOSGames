@@ -30,13 +30,21 @@ namespace SpellingJungle
 		{
 			CopyFilesRecursively(TempSave, appDataDir);
 			Directory.Delete(TempSave, true);
+			if (File.Exists(".\\stdout.txt"))
+			{
+				File.Delete(".\\stdout.txt");
+			}
 		}
 
 		private static void Main()
 		{
+			Application.EnableVisualStyles();
+			Application.SetCompatibleTextRenderingDefault(false);
+			Application.Run(new ConfigForm());
+
 			AppDomain.CurrentDomain.UnhandledException += (sender, e) => Save();
 			AppDomain.CurrentDomain.ProcessExit += (sender, e) => Save();
-
+			
 			try
 			{
 				Directory.CreateDirectory(TempSave);
@@ -60,7 +68,7 @@ namespace SpellingJungle
 			{
 				StartInfo = new ProcessStartInfo()
 				{
-					FileName = ".\\DOSBox.exe",
+					FileName = ".\\dosbox.exe",
 					Arguments = "-noconsole"
 				}
 			};
