@@ -21,7 +21,7 @@ namespace SpellingJungle
 
 			conffile = File.ReadAllText(ConfigFile);
 			string[] linesconffile = File.ReadAllLines(ConfigFile);
-			WindowChk.Checked = !(FullScrnChk.Checked = oFullscreen = bool.Parse(linesconffile.First(s => s.StartsWith("fullscreen=")).Replace("fullscreen=", "")));
+			WindowChk.Checked = panel1.Enabled = MouseLbl.Visible = !(DblBufChk.Enabled = FullScrnChk.Checked = oFullscreen = bool.Parse(linesconffile.First(s => s.StartsWith("fullscreen=")).Replace("fullscreen=", "")));
 			DblBufChk.Checked = oFulldouble = bool.Parse(linesconffile.First(s => s.StartsWith("fulldouble=")).Replace("fulldouble=", ""));
 			HigherRdo.Checked = !(LowerRdo.Checked = oLowerRes = linesconffile.First(s => s.StartsWith("windowresolution=")).Replace("windowresolution=", "") == "1024x768");
 		}
